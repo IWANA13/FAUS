@@ -11,20 +11,20 @@ public class gitpractice {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Nº Casos:");
+		System.out.println("NÂº Casos:");
 		int ncaso = sc.nextInt();
 		
 		while(ncaso<1) {
-			System.out.println("Nº Casos:");
+			System.out.println("NÂº Casos:");
 			ncaso = sc.nextInt();
 		}
 		
 		for(int x=0; x<ncaso; x++) {
-			System.out.println("Nº Dígitos:");
+			System.out.println("NÂº DÃ­gitos:");
 			int ndigit = sc.nextInt();
 			
 			while(ndigit<1 || ndigit>10) {
-				System.out.println("Nº Dígitos:");
+				System.out.println("NÂº DÃ­gitos:");
 				ndigit = sc.nextInt();
 			}
 		
@@ -43,13 +43,13 @@ public class gitpractice {
 		
 	}
 
-	private static void moda(int[] array) {
+	private static void moda(int[] array) {			// mÃ©todo el cual recibe como argumento el array de arriba.
 		HashMap <Integer,Integer> map = new HashMap();
 		   
 	    int repetido = 0, numMax = -1,repetidoCon = 0;
 	   
-	    for (int i : array) {
-	        if (map.containsKey(i)) {
+	    for (int i : array) {				// Hashmap para ver cuantas veces se repite un dato dentro del array.
+	        if (map.containsKey(i)) {		
 	          repetido =  map.get(i);
 	          map.put(i, ++repetido); 
 	        } else{
@@ -57,7 +57,7 @@ public class gitpractice {
 	        }
 	    }
 	     
-	    for (Map.Entry<Integer,Integer> e : map.entrySet()) {
+	    for (Map.Entry<Integer,Integer> e : map.entrySet()) { //recorre el Hashmap y verifica cual es el dato que mÃ¡s se repite
 	        if (repetidoCon < e.getValue()) {
 	            repetidoCon = e.getValue();
 	            numMax = e.getKey();
@@ -65,7 +65,7 @@ public class gitpractice {
 	        }
 	    }
 	    
-	    System.out.println("la moda en la población es  " +   numMax);
+	    System.out.println("la moda en la poblaciÃ³n es  " +   numMax);
 	}
 
 
